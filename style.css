@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lucida Grande";
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+
+    margin-top: 2px;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    margin-right: -25px;
+}
+
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.header-right a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-icon {
+    color: white;
+    float: right;
+    font-size: 25px;
+    padding: 21px 0;
+    display: none;
+}
+
+
+/* batas header dengan body*/
+
+/* CSS Resets */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+/* end css reset */
+
+.container2 {
+    /* posisikan letak slidernya */
+    margin: 6.6% auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container2,
+ul.slide li img {
+    width: 900px;
+    /* Sesuaikan */
+    height: 500px;
+    /* Sesuaikan  */
+
+}
+
+
+ul.slide {
+    position: absolute;
+    display: block;
+    width: 300%;
+
+}
+
+.caption {
+    /* styling untuk deskripsi setiap slide */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    padding: 10px;
+    color: #fff;
+    left: 0;
+    right: 0;
+}
+
+/* style jadi slider */
+ul.slide li {
+    display: inline-block;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    ox-sizing: border-box;
+    -webkit-transition: -webkit-transform 2000ms;
+    -moz-transition: -moz-transform 2000ms;
+    transition: -webkit-transform 2000ms, transform 2000ms;
+}
+
+ul.slide li.slide-1 {
+    left: 0%;
+}
+
+ul.slide li.slide-2 {
+    left: 100%;
+}
+
+ul.slide li.slide-3 {
+    left: 200%;
+}
+
+#nav-1:checked~ul.slide li {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+#nav-2:checked~ul.slide li {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+#nav-3:checked~ul.slide li {
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    transform: translateX(-200%);
+}
+
+
+
+.radio-nav {
+    /* menghilangkan radio button */
+    display: none;
+}
+
+/* styling untuk tombol next dan previous slide */
+.nav-arrow {
+    position: absolute;
+    top: 45%;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-next {
+    right: 10px;
+}
+
+.nav-prev {
+    left: 10px;
+}
+
+.nav-arrow label {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.container2:hover .nav-arrow label {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* end styling untuk tombol next dan previous slide */
+/*Setiap slide mempunya tombol prev dan next-nya masing-masing. Nah, tampilkan tombol yang tepat dengan kode dibawah ini*/
+#nav-1:checked~.nav-prev label.nav-3,
+#nav-1:checked~.nav-next label.nav-2,
+#nav-2:checked~.nav-prev label.nav-1,
+#nav-2:checked~.nav-next label.nav-3,
+#nav-3:checked~.nav-prev label.nav-2,
+#nav-3:checked~.nav-next label.nav-1 {
+    z-index: 2;
+    opacity: 1;
+}
+
+/* batas body dengn main*/
+h1 {
+    font-size: 40px;
+    margin: auto;
+    padding-top: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.lesson-wrapper {
+    margin-top: auto 0;
+    padding-bottom: 90px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.lesson {
+    margin: auto;
+    padding: 10px;
+    float: left;
+    width: 25%;
+
+}
+
+.lesson img {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* footer*/
+footer {
+    width: 100%;
+    border: 1px solid #F8F8FF;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px 20px 5px 5px;
+    margin-top: 150px;
+}
+
+.footer-list {
+    float: right;
+}
+
+.footer-list li {
+    padding-bottom: 5px;
+}
